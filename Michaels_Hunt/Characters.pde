@@ -1,7 +1,8 @@
 class Characters {
   private float MichaelSpeed = 2;
+  private float PreySpeed = 1.25;
   PVector weMovin = new PVector(800, 700);
-  PVector runAway = new PVector(40, 40);
+  PVector runAway = new PVector(400, 404);
   PVector runTaway = new PVector(700, 100);
   PVector runSaway = new PVector(100, 600);
   int ballx=40;
@@ -37,13 +38,13 @@ class Characters {
   }
   
   void keyPressed() {
-    if (key=='w')
+    if (key=='w' && weMovin.y > 0)
       weMovin.y-=MichaelSpeed;
-    if (key=='s')
+    if (key=='s' && weMovin.y < 893)
       weMovin.y+=MichaelSpeed;
-    if (key=='d')
+    if (key=='d' && weMovin.x < 893)
       weMovin.x+=MichaelSpeed;
-    if (key=='a')
+    if (key=='a' && weMovin.x > 0)
       weMovin.x-=MichaelSpeed;
     if (key==' ')
       MichaelSpeed=10;
@@ -51,7 +52,35 @@ class Characters {
       MichaelSpeed=2;
   }
   
-  //void 
+ 
   
   
+  void preyMove() {
+    if (weMovin.x < runAway.x-40 && weMovin.y < runAway.y-12)
+    runAway.x+=PreySpeed;
+    if (weMovin.x < runAway.x+40 && weMovin.y < runAway.y+12)
+    runAway.x-=PreySpeed;
+    if (weMovin.y < runAway.y-40 && weMovin.x < runAway.x-12)
+    runAway.y+=PreySpeed;
+    if (weMovin.y < runAway.y+40 && weMovin.x < runAway.x+12)
+    runAway.y-=PreySpeed;
+    
+    //if (weMovin.x <= runTaway.x-40)
+    //runTaway.x+=PreySpeed;
+    //if (weMovin.x <= runTaway.x+40)
+    //runTaway.x-=PreySpeed;
+    //if (weMovin.x <= runTaway.y-40)
+    //runTaway.x+=PreySpeed;
+    //if (weMovin.x <= runTaway.y+40)
+    //runTaway.x-=PreySpeed;
+    
+    //if (weMovin.x <= runSaway.x-40)
+    //runSaway.x+=PreySpeed;
+    //if (weMovin.x <= runSaway.x+40)
+    //runSaway.x-=PreySpeed;
+    //if (weMovin.x <= runSaway.y-40)
+    //runSaway.x+=PreySpeed;
+    //if (weMovin.x <= runSaway.y+40)
+    //runSaway.x-=PreySpeed;
+  }
 }

@@ -18,12 +18,14 @@ Characters smack = new Characters();
     smack.createCharacter();
   if (keyPressed)
     smack.keyPressed();
+    smack.preyMove();
 }
   void safeZones() {
     fill(128, 97, 65);
     rect(40, 700, 80, 80);
     fill(172, 116, 92);
     rect(600, 27, 60, 90);
+    //if ()
 }
 
   void otherTextures(){

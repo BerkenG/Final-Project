@@ -65,22 +65,22 @@ class Characters {
     if (weMovin.y < runAway.y+40 && weMovin.x < runAway.x+12)
     runAway.y-=PreySpeed;
     
-    //if (weMovin.x <= runTaway.x-40)
-    //runTaway.x+=PreySpeed;
-    //if (weMovin.x <= runTaway.x+40)
-    //runTaway.x-=PreySpeed;
-    //if (weMovin.x <= runTaway.y-40)
-    //runTaway.x+=PreySpeed;
-    //if (weMovin.x <= runTaway.y+40)
-    //runTaway.x-=PreySpeed;
+    if (weMovin.x < runTaway.x-40 && weMovin.y < runTaway.y-12)
+    runTaway.x+=PreySpeed;
+    if (weMovin.x < runTaway.x+40 && weMovin.y < runTaway.y+12)
+    runTaway.x-=PreySpeed;
+    if (weMovin.y < runTaway.y-40 && weMovin.x < runTaway.x-12)
+    runTaway.y+=PreySpeed;
+    if (weMovin.y < runTaway.y+40 && weMovin.x < runTaway.x+12)
+    runTaway.y-=PreySpeed;
     
-    //if (weMovin.x <= runSaway.x-40)
-    //runSaway.x+=PreySpeed;
-    //if (weMovin.x <= runSaway.x+40)
-    //runSaway.x-=PreySpeed;
-    //if (weMovin.x <= runSaway.y-40)
-    //runSaway.x+=PreySpeed;
-    //if (weMovin.x <= runSaway.y+40)
-    //runSaway.x-=PreySpeed;
+     if (weMovin.x < runSaway.x-40 && weMovin.y < runSaway.y-12)
+    runSaway.x+=PreySpeed;
+    if (weMovin.x < runSaway.x+40 && weMovin.y < runSaway.y+12)
+    runSaway.x-=PreySpeed;
+    if (weMovin.y < runSaway.y-40 && weMovin.x < runSaway.x-12)
+    runSaway.y+=PreySpeed;
+    if (weMovin.y < runSaway.y+40 && weMovin.x < runSaway.x+12)
+    runSaway.y-=PreySpeed;
   }
 }

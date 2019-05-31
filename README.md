@@ -1,11 +1,11 @@
 # Final-Project
-# Project Title and purpose
+# Michael's Hunt Purpose: To catch all those unruly baritones
 
-One Paragraph of project description goes here
+Basically this project is a hunting game. You, the player go throughout a map and try to collect the smaller prey items that run away from you. You increase the score by collecting the yellow squares. There are safe zones, the brown boxes, and the yellow squares can hide from the player character within them. 
 
 ### Difficulties or opportunities you encountered along the way.
 
-The toughest part was...
+The toughest part was creating the movement for the prey as they now move but still not properly. Also there is a problem where my safe zones aren't working.
 
 ### Most interesting piece of your code and explanation for what it does.
 
